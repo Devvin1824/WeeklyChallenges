@@ -181,14 +181,42 @@ namespace ChallengesWithTestsMark8
         
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-
-            if (number < 0)
+            long answer = 0;
+            if (number <= 1)
             {
                 return 0;
             }
-
+            else
+            {
+                if (number % 2 != 0)
+                {
+                    answer = number / 2;
+                }
+                else
+                {
+                    answer = number / 2;
+                }
+                return answer;
+            }
+            /* above code is different verison of both ways below 
             long newNum = 0;
+            if (number % 2 == 0)
+            {
+                number -= 1;
+            }
+            else
+            {
+                number -= 2;
+            }
+            while (number >= 1)
+            {
+                number = number - 2;
+                newNum++;
+            }
+            return newNum;
+            */
 
+            /* Above code is shortened version of this same code 
             if (number % 2 == 0)
             {
               number --;
@@ -209,6 +237,7 @@ namespace ChallengesWithTestsMark8
               }
               return newNum;
             }
+            */
         }
     }
 }
